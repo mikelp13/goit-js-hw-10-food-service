@@ -1,4 +1,10 @@
 import './styles.css';
-import menu from './menu.json';
 import './js/theme';
-console.log(menu);
+import menu from './menu.json';
+import  template from'./templates/menu-items.hbs' 
+
+const markup = template(menu);
+
+const menuRef = document.querySelector('.js-menu')
+
+menuRef.insertAdjacentHTML('beforeend', markup)
