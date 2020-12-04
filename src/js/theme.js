@@ -9,7 +9,7 @@ const refs = {
 };
 
 refs.switch.addEventListener('change', changeTheme);
-refs.body.classList.add(Theme.LIGHT);
+
 
 checkLocalStorage();
 
@@ -27,9 +27,10 @@ function changeTheme() {
 }
 
 function checkLocalStorage(){
-  const savedTheme = localStorage.getItem('theme');
+  refs.body.classList.add(Theme.LIGHT);
+  const currentTheme = localStorage.getItem('theme');
 
-  if (savedTheme === Theme.DARK) {
+  if (currentTheme === Theme.DARK) {
     refs.switch.checked = true;
     refs.body.classList.replace(Theme.LIGHT, Theme.DARK);
   }
