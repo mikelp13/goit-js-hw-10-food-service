@@ -21,7 +21,6 @@ function changeTheme() {
     localStorage.setItem('theme', Theme.DARK);
   } else {
     refs.body.classList.replace(Theme.DARK, Theme.LIGHT);
-    localStorage.removeItem('theme');
     localStorage.setItem('theme', Theme.LIGHT);
   }
 }
